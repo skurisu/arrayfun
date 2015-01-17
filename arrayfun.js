@@ -9,8 +9,8 @@ module.exports = {
   },
 
   max : function (array) {
-   var something = 0;
-    if (array === undefined || array === false ) {
+    if (!array || array.length === 0) {
+    // if (array === undefined || array === false ) {
       return -Infinity;
     } else {
       return Math.max.apply(null, array);

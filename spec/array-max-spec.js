@@ -16,4 +16,19 @@ describe("arrayfun-max", function() {
 
     expect(result).toBe(-Infinity);
   });
+
+  it("Return -Infinity if the collection is empty or falsey", function() {
+    var test_array = null;
+
+    var result = arrayfun.max(test_array);
+
+    expect(result).toBe(-Infinity);
+  });
+
+  it("Return -Infinity if the collection is empty or falsey", function() {
+
+    var result = arrayfun.max();
+
+    expect(result).toBe(-Infinity);
+  });
 });
