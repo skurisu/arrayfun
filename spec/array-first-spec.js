@@ -1,6 +1,6 @@
 var arrayfun = require('../arrayfun');
 
-describe("arrayfun", function() {
+describe("array-first", function() {
   it("Returns the first element of the array", function() {
     var test_array = ['a','b','c'];
 
