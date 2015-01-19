@@ -13,7 +13,16 @@ module.exports = {
     // if (array === undefined || array === false ) {
       return -Infinity;
     } else {
-      return Math.max.apply(null, array);
+      return Math.max.apply(Math, array);
+    }
+  },
+
+  min : function (array) {
+    if (!array || array.length === 0) {
+    // if (array === undefined || array === false ) {
+      return Infinity;
+    } else {
+      return Math.min.apply(Math, array);
     }
   }
 };
