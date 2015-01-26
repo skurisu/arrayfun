@@ -11,12 +11,12 @@ describe("array-difference", function() {
 
   });
 
-  it("Creates an array excluding all values of the provided arrays", function() {
-    var testArray = [1,2,3,4,5];
-    var testArray2 = [1,2,3,5,10];
+  // it("Creates an array excluding all values of the provided arrays", function() {
+  //   var testArray = [1,2,3,4,5];
+  //   var testArray2 = [1,2,3,5,10];
     
-    var result2 = arrayfun.first(testArray,testArray2);
+  //   var result2 = arrayfun.first(testArray,testArray2);
 
-    expect(result2).toEqual([4]);
-  });
+  //   expect(result2).toEqual([4]);
+  // });
 });

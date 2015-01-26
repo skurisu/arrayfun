@@ -26,29 +26,17 @@ module.exports = {
     }
   },
 
-  intersection : function () {
-    var array = arguments[0];
-    var array2 = arguments[1];
+  intersection : function (array,array2) {
     var combined = [];
-    var uniqueElements = {};
   
     for(var i = 0; i < array.length; i++){
       for(var j = 0; j < array2.length; j++){
-        if(array[i] === array2[j] && uniqueElements[array[i]] !== "I've already added this"){
-          uniqueElements[array[i]] = "I've already added this";
+        if(array[i] === array2[j]){
           combined.push(array[i]);
         }
       }
     }
-   if(arguments.length === 2){
-     return combined;
-   }else {
-     var computed = [combined];
-     var argumentsArray = Array.apply(this,arguments);
-     var remaining = argumentsArray.slice(1,argumentsArray.length - 1);
-     var newArgs = computed.concat(remaining);
-     return module.exports.intersection.apply("this parameter doesn't matter", newArgs);
-   }
+    return combined;
   },
   //   var result = [];
   //   var foundKey = false;
@@ -117,19 +105,17 @@ module.exports = {
     //   );
     // },
 
-  difference : function () {
-    var array = arguments[0];
-    var array2 = arguments[1];
+  difference : function (array,array2) {
     var combined = [];
   
     for(var i = 0; i < array.length; i++){
       for(var j = 0; j < array2.length; j++){
         if(array[i] === array2[j]){
-          uniqueElements[array[i]] = "I've already added this";
           combined.push(array[i]);
         }
       }
     }
+    return combined;
   },
 
   contains : function (array,target) {
