@@ -106,16 +106,15 @@ module.exports = {
     // },
 
   difference : function (array,array2) {
-    var combined = [];
   
     for(var i = 0; i < array.length; i++){
       for(var j = 0; j < array2.length; j++){
         if(array[i] === array2[j]){
-          combined.push(array[i]);
+          array.splice(i, 1);
         }
       }
     }
-    return combined;
+    return array;
   },
 
   contains : function (array,target) {
