@@ -105,6 +105,43 @@ module.exports = {
     //   );
     // },
 
+  uniq : function (array) {
+    
+    var newArray = [];
+    var unique = {};
+    var ok = "";
+  
+    for(var i = 0; i < array.length; i++) {
+      if(unique.hasOwnProperty(array[i])){
+        unique[array[i]]++;
+      }
+      else {
+        unique[array[i]] = 1;
+      }
+    }
+
+    for (var key in unique) {
+      if(unique[key] === 1) {
+      ok = parseInt(key);
+        newArray.push(ok);
+      }
+    }
+    return newArray;
+    
+  },
+
+//   uniq: function (array) {
+//   for(var i = 0; i < array.length; i++) {
+//     if(unique.hasOwnProperty(array[i])){
+//       unique[array[i]]++;
+//     }
+//     else {
+//       unique[array[i]] = 1;
+//     }
+//   }
+//   return Object.keys(unique);
+// }
+
   difference : function (array,array2) {
   
     for(var i = 0; i < array.length; i++){
@@ -115,6 +152,8 @@ module.exports = {
       }
     }
     return array;
+
+
   },
 
   contains : function (array,target) {
